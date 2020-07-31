@@ -1,0 +1,187 @@
+@font-face{
+    font-family: Robot;
+    src: url(google-fonts/Roboto-Medium.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: Robot;
+    color: #fafafa;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+    height: calc(100% - 61px);
+    object-fit: cover;
+    display: block;
+}
+
+body{
+    font-family: Robot;
+    color: #fafafa;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #c70039;
+}
+
+.header ul{
+    display: flex;
+}
+
+
+.header ul a{
+    display: block;
+    padding: 30px 20px;
+}
+
+.header ul a:hover{
+    background-color: #1C4754;
+}
+
+.introduce{
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.introduce h1{
+    font-size: 60px;
+}
+
+.introduce p{
+    color: #aa1942;
+    font-size: 30px;
+}
+
+.projects{
+    background-color: #45567d;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.projects>p{
+    font-size: 40px;
+    margin-bottom: 80px;
+    border-bottom: 2px white solid;
+    width: 640px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 40px;
+}
+
+.grid a{
+    background-color: #3a3d40;
+    box-shadow: 5px 5px 10px #000;
+}
+.title{
+    padding: 20px;
+}
+
+.title span{
+    color: #3a3d40;
+    transition: color 0.3s
+}
+
+.project:hover span{
+    color: #ff9234;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 10px;
+    margin-top: 40px;
+    background-color: #3a3d40;
+    transition: background-color 0.3s ease-out;
+    border-radius: 2px;
+}
+
+.btn i{
+    margin-left: 10px;
+    transition: transform 0.3s ease-out;
+}
+
+.btn:hover i{
+    transform: translateX(3px);
+    
+}
+
+.btn:hover{
+    background-color: #aa1942;
+}
+
+.footer{
+    background-color: #3a3d40;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contact h1{
+    font-size: 60px;
+}
+
+.contact p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact .way{
+    display: flex;
+    width: 1000px;
+    justify-content: space-evenly;
+}
+
+.contact .way a{
+    display: inline-block;
+    font-size: 25px;
+    transition: transform 0.3s ease-out;
+}
+
+
+.contact .way a:hover{
+    transform: translateY(10px);
+}
+
+
+.copyright{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+    font-size: 20px;
+}
