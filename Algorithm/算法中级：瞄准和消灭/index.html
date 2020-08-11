@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function destroyer(arr,...del) {
+            // 删掉那些值
+            for(let i=0;i<del.length;i++){
+                for(let j=0;j<arr.length;j++){
+                    if(arr[j]==del[i]){
+                        arr.splice(j,1)
+                        j-=1
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addTogether(...args) {
+            if(args.length==2){
+                if(typeof args[0]=='number'&& typeof args[1] == 'number'){
+                    return args.reduce((a,b)=>a+b)
+                }
+            }else if(typeof args[0] == 'number'){
+                return function(arg){
+                    if(typeof arg == 'number'){
+                        return Number(args) + Number(arg)
+                    }else{
+                        return undefined
+                    }
+                }
+            }else{
+                return undefined
+            }
+        }
+        console.log(addTogether(2)([3]));
+    </script>
+</body>
+
+</html>

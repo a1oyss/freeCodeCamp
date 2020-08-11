@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Person = function (firstAndLast) {
+                // 请先写出这个方法。其他方法的写法与这个类似
+                let fullName = firstAndLast
+                let temp = firstAndLast.split(" ")
+                let firstName = temp[0]
+                let lastName = temp[1]
+                this.getFirstName = function () {
+                    return firstName
+                }
+                this.getLastName = function () {
+                    return lastName
+                }
+                this.getFullName = function () {
+                    return firstName+" "+lastName
+                }
+                this.setFirstName = function (first) {
+                    firstName = first
+                }
+                this.setLastName = function (last) {
+                    lastName = last
+                }
+                this.setFullName = function (firstAndLast) {
+                    fullName = firstAndLast
+                    temp = firstAndLast.split(" ")
+                    firstName = temp[0]
+                    lastName = temp[1]
+                }
+            };
+
+            var bob = new Person('Bob Ross');
+            bob.setFirstName("Haskell")
+            console.log(bob.getFullName());
+    </script>
+</body>
+
+</html>

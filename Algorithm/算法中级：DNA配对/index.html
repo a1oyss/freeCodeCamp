@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pairElement(str) {
+            let DNA=[]
+            let map={
+                "A":["A","T"],
+                "T":["T","A"],
+                "G":["G","C"],
+                "C":["C","G"]
+            }
+            for(let i=0;i<str.length;i++){
+                DNA.push(map[str[i]])
+            }
+            return DNA;
+        }
+
+        console.log(pairElement("GCG"));
+    </script>
+</body>
+
+</html>

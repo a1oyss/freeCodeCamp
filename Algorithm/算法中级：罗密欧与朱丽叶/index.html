@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function whatIsInAName(collection, source) {
+            // What's in a name?
+            var arr = [];
+            let keys = Object.keys(source)
+            // 请把你的代码写在这条注释以下
+            arr = collection.filter((item) => {
+                return keys.every((key)=>{
+                    if(key in item&&source[key]==item[key]){
+                        return true
+                    }else{
+                        return false
+                    }
+                })
+            })
+
+            // 请把你的代码写在这条注释以上
+            return arr;
+        }
+
+        console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+    </script>
+</body>
+
+</html>

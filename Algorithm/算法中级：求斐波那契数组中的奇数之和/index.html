@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sumFibs(num) {
+            let fibs=[1,1]
+            let temp=0
+            let result=0.0
+            for(let i=2;temp<num;i++){
+                fibs[i]=fibs[i-1]+ fibs[i-2]
+                temp=fibs[i]
+            }
+            console.log(fibs);
+            for(let i=0;i<fibs.length;i++){
+                if(fibs[i]%2!==0&&fibs[i]<=num){
+                    result += fibs[i]
+                }
+            }
+            return result
+            
+        }
+
+        console.log(sumFibs(75025));
+    </script>
+</body>
+
+</html>

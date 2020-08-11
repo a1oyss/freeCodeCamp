@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function diffArray(arr1, arr2) {
+            var newArr = [];
+            let temp=[]
+            temp=arr1.filter((item)=>{
+                return arr2.indexOf(item)==-1
+            })
+            newArr.push(...temp)
+            temp= arr2.filter((item) => {
+                return arr1.indexOf(item)==-1
+            })
+            newArr.push(...temp)
+            // 这是一个党异伐同的过程
+            return newArr;
+        }
+
+        console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+    </script>
+</body>
+
+</html>

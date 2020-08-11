@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fearNotLetter(str) {
+            let char = str.charCodeAt(0)
+            for (let i = 0; i < str.length; i++) {
+                if (String.fromCharCode(char) !== str[i]) {
+                    return String.fromCharCode(char)
+                }
+                char += 1
+            }
+
+        }
+
+        console.log(fearNotLetter("abce"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function translatePigLatin(str) {
+            if (str[0] == 'a' || str[0] == 'e' || str[0] == 'i' || str[0] == 'o' || str[0] == 'u') {
+                return str + 'way'
+            } else {
+                let letter = ""
+                let temp = ""
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+                        letter = str.slice(0, i)
+                        temp = str.slice(i)
+                        return temp + letter + "ay"
+                    }
+                }
+                return str + "ay";
+                
+            }
+            
+        }
+
+        console.log(translatePigLatin("consonant"));
+    </script>
+</body>
+
+</html>

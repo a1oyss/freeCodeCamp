@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function truthCheck(collection, pre) {
+            // 每个都是真的吗？
+            return collection.every(item => {
+                return Boolean(item[pre]) && item.hasOwnProperty(pre)
+            })
+
+        }
+
+        console.log(truthCheck([{ "user": "Tinky-Winky", "sex": "male" },
+        { "user": "Dipsy", "sex": "male" },
+        { "user": "Laa-Laa", "sex": "female" },
+        { "user": "Po", "sex": "female" }], "sex"));
+    </script>
+</body>
+
+</html>

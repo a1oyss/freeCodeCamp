@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sumPrimes(num) {
+            let arr = []
+            for (let i = 2; i <= num; i++) {
+                let flag = 1
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        flag = -1
+                        break
+                    }
+                }
+                if (flag != -1) {
+                    
+                    arr.push(i)
+                }
+            }
+            console.log(arr);
+            return arr.reduce((a,b)=>a+b);
+        }
+
+        console.log(sumPrimes(977));
+    </script>
+</body>
+
+</html>

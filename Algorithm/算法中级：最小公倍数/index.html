@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function smallestCommons(arr) {
+            //最大公因数
+            function getGcd(a, b) {
+                let result = 0
+                if (a >= b) {
+                    for (let i = 1; i <= b; i++) {
+                        if (a % i === 0 && b % i === 0) {
+                            result = i
+                        }
+                    }
+                } else {
+                    for (let i = 1; i <= a; i++) {
+                        if (a % i === 0 && b % i === 0) {
+                            result = i
+                        }
+                    }
+                }
+                return result
+            }
+            //最小公倍数=两数之积/最大公因数
+            let min = Math.min(...arr)
+            let max = Math.max(...arr)
+            let temp = min
+            for (let index = min; index <= max; index++) {
+                temp = (temp * index) / getGcd(temp, index)
+            }
+            return temp
+        }
+
+
+        console.log(smallestCommons([1, 5]));
+    </script>
+</body>
+
+</html>
