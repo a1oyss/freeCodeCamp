@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff !important;
+}
+
+a:hover{
+    opacity:0.9;
+}
+
+.btn{
+    border: none !important;
+}
+
+
+#wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 100vh;
+    
+}
+
+#quote-box{
+    width: 450px;
+    padding: 50px 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#quote-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#quote-author{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#quote-share a{
+    width: 44px;
+}
+
+#quote-text{
+    font-weight: 400;
+    font-size: 25px;
+    width: 100%;
+    word-break: break-all;
+    text-align: center;
+}
+
+#quote-author{
+    font-size: 15px;
+}
+#quote-text p{
+    display: inline;
+}
